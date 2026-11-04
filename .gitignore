@@ -1,0 +1,15 @@
+# Logs and temporary files
+*.log
+*.tmp
+.system_generated/
+scratch/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

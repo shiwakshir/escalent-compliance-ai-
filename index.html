@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People &amp; Workplace AI &mdash; Employee Workplace Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="employee-body">
+  <!-- Top Internal Trust & Security Banner -->
+  <header class="security-banner employee-banner">
+    <div class="banner-inner">
+      <div class="banner-left">
+        <span class="sec-badge sec-badge-employee">INTERNAL WORKPLACE PORTAL</span>
+        <span class="banner-text">Official People &amp; Compliance Assistant &bull; Grounded in Approved Company Policies</span>
+      </div>
+      <div class="banner-right">
+        <span class="pulse-indicator pulse-green"></span>
+        <span class="gateway-status">Verified Knowledge Base: <strong>Active</strong></span>
+        <a href="admin.html" class="portal-switch-link" title="Open Administrative & Security Backend (Authorized Staff Only)">
+          Security &amp; IT Admin Backend &#128274;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Header -->
+  <div class="app-navbar employee-navbar">
+    <div class="nav-brand">
+      <div class="brand-logo employee-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="brand-info">
+        <h1 class="brand-title">People &amp; Workplace AI</h1>
+        <p class="brand-subtitle">Your helpful guide for policies, benefits, time-off guidelines, and workplace requests</p>
+      </div>
+    </div>
+
+    <!-- Active Employee Profile & Persona Context -->
+    <div class="nav-user-context employee-user-box">
+      <div class="persona-selector-box">
+        <label for="persona-select">Viewing as Employee:</label>
+        <select id="persona-select" class="form-select employee-select">
+          <option value="john.doe@enterprise.internal" selected>John Doe (Employee &bull; US)</option>
+          <option value="sophie.clarke@enterprise.internal">Sophie Clarke (Employee &bull; UK)</option>
+          <option value="rajesh.kumar@enterprise.internal">Rajesh Kumar (HR Partner &bull; IN)</option>
+        </select>
+      </div>
+      <div class="user-meta-chip">
+        <div class="avatar employee-avatar" id="user-avatar">JD</div>
+        <div class="user-details">
+          <div class="user-name-row">
+            <span class="user-name" id="user-display-name">John Doe</span>
+            <span class="role-badge badge-blue" id="user-role-badge">EMPLOYEE</span>
+          </div>
+          <div class="user-abac-row">
+            <span class="abac-item" id="user-jur-badge">US</span> &bull;
+            <span class="abac-item" id="user-bu-badge">Automotive Research</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Employee Navigation Tabs -->
+  <nav class="app-tabs employee-tabs">
+    <button class="tab-btn active" data-tab="tab-chat">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Ask Policy Assistant
+    </button>
+    <button class="tab-btn" data-tab="tab-policies">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      My Approved Policies
+    </button>
+    <button class="tab-btn" data-tab="tab-actions">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      My Workflow Requests
+      <span class="badge-count" id="pending-actions-count">0</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-support-channels">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Confidential Support &amp; Hotlines
+    </button>
+  </nav>
+
+  <!-- Application Body Container -->
+  <main class="app-main employee-main">
+    
+    <!-- =================================================================== -->
+    <!-- TAB 1: Conversational Assistant                                     -->
+    <!-- =================================================================== -->
+    <section id="tab-chat" class="tab-content active">
+      <div class="chat-layout employee-chat-layout">
+        
+        <!-- Left: Friendly Chat Conversation Area -->
+        <div class="chat-container employee-chat-container">
+          <div class="chat-header employee-chat-header">
+            <div class="chat-title-group">
+              <h3>Ask Anything About Company Policies &amp; Benefits</h3>
+              <p class="text-muted">Direct answers from verified company policies. Official citations and next steps included with every response.</p>
+            </div>
+            <button id="btn-clear-chat" class="btn btn-sm btn-ghost" title="Start a fresh conversation">Start New Chat</button>
+          </div>
+
+          <div class="chat-messages" id="chat-messages-container">
+            <!-- Warm Welcome Hero Message -->
+            <div class="message-row agent-row">
+              <div class="msg-avatar agent-avatar">AI</div>
+              <div class="msg-card welcome-card">
+                <div class="msg-card-header">
+                  <span class="badge badge-green">&#10003; Verified Workplace Assistant</span>
+                  <span class="msg-time">Just now</span>
+                </div>
+                <div class="msg-body">
+                  <h4 class="welcome-heading">Hello! How can I assist you today?</h4>
+                  <p class="welcome-desc">
+                    I can help you look up official company benefits, explain remote and hybrid work rules, verify leave entitlements, and draft requests for your manager.
+                  </p>
+                  
+                  <!-- Quick-Click Starter Prompts for Employees -->
+                  <div class="starter-prompts-grid">
+                    <button class="starter-card btn-prompt-quick" data-prompt="What are our core collaboration hours for hybrid and remote work?">
+                      <div class="starter-icon">&#127969;</div>
+                      <div class="starter-text">
+                        <strong>Hybrid Work Hours</strong>
+                        <span>What are our core hours?</span>
+                      </div>
+                    </button>
+
+                    <button class="starter-card btn-prompt-quick" data-prompt="How do I claim the $500 home office equipment stipend and monthly internet allowance?">
+                      <div class="starter-icon">&#128187;</div>
+                      <div class="starter-text">
+                        <strong>Home Office Allowance</strong>
+                        <span>How to claim $500 stipend</span>
+                      </div>
+                    </button>
+
+                    <button class="starter-card btn-prompt-quick" data-prompt="What paid parental leave and FMLA benefits are provided for new parents?">
+                      <div class="starter-icon">&#128118;</div>
+                      <div class="starter-text">
+                        <strong>Parental &amp; Family Leave</strong>
+                        <span>Paid time off for new parents</span>
+                      </div>
+                    </button>
+
+                    <button class="starter-card btn-prompt-quick" data-prompt="What is our client confidentiality policy for research data and surveys?">
+                      <div class="starter-icon">&#128272;</div>
+                      <div class="starter-text">
+                        <strong>Client Confidentiality</strong>
+                        <span>Protecting research &amp; survey data</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div class="msg-card-footer welcome-footer">
+                  <span>&#128737;&#65039; <strong>Trust &amp; Privacy:</strong> Answers are retrieved strictly from approved policies applicable to your jurisdiction. Sensitive health or grievance inquiries are routed confidentially.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input Bar -->
+          <div class="chat-input-bar employee-input-bar">
+            <!-- Hidden simulation container kept for backend integration -->
+            <div id="doc-upload-preview" class="doc-upload-preview hidden">
+              <span class="doc-icon">&#128196;</span>
+              <span id="doc-upload-name" class="doc-name">attachment.txt</span>
+              <button id="btn-remove-doc" class="btn-remove-attachment" title="Remove attachment">&times;</button>
+            </div>
+
+            <form id="chat-form" class="chat-form">
+              <textarea id="chat-input" class="chat-textarea employee-textarea" rows="1" placeholder="Type your question about company policies, benefits, leave, or travel..."></textarea>
+              <button type="submit" id="btn-send-chat" class="btn btn-primary btn-send">
+                <span>Ask AI</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+            <div class="input-helper-text">
+              <span>Press <strong>Enter</strong> to submit. Grounded in approved company policies.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Employee-Friendly Workplace Hub Sidebar -->
+        <aside class="chat-sidebar employee-sidebar">
+          
+          <!-- Card 1: Employee Personalized Profile Context -->
+          <div class="sidebar-card profile-context-card">
+            <div class="context-header">
+              <span class="context-label">Current Employee Profile</span>
+              <span class="status-dot-active" title="Authenticated via SSO">SSO Active</span>
+            </div>
+            <div class="employee-summary">
+              <div class="emp-name" id="sidebar-emp-name">John Doe</div>
+              <div class="emp-meta" id="sidebar-emp-title">Senior Market Research Analyst</div>
+              <div class="emp-tags">
+                <span class="tag-pill" id="sidebar-emp-jur">Jurisdiction: US</span>
+                <span class="tag-pill" id="sidebar-emp-bu">BU: Automotive Research</span>
+              </div>
+            </div>
+            <p class="text-xs text-muted" style="margin-top:10px;">
+              Your questions automatically retrieve policies relevant to your location and department.
+            </p>
+          </div>
+
+          <!-- Card 2: Common Questions & Quick Answers -->
+          <div class="sidebar-card">
+            <h4>Common Questions</h4>
+            <p class="text-muted text-xs">Click any topic to get an instant answer:</p>
+            
+            <div class="help-topics-list">
+              <button class="help-topic-btn btn-prompt-quick" data-prompt="What is the US hybrid work policy and core collaboration hours?">
+                <span class="topic-icon">&#128338;</span>
+                <span class="topic-title">Core Collaboration Hours</span>
+              </button>
+
+              <button class="help-topic-btn btn-prompt-quick" data-prompt="What is the home office allowance and monthly internet reimbursement?">
+                <span class="topic-icon">&#128181;</span>
+                <span class="topic-title">Home Office &amp; Internet Stipend</span>
+              </button>
+
+              <button class="help-topic-btn btn-prompt-quick" data-prompt="What are the maternity and parental leave benefits for employees?">
+                <span class="topic-icon">&#128106;</span>
+                <span class="topic-title">Parental &amp; Maternity Leave</span>
+              </button>
+
+              <button class="help-topic-btn btn-prompt-quick" data-prompt="What are our policies regarding OEM vehicle telematics and proprietary client data?">
+                <span class="topic-icon">&#128664;</span>
+                <span class="topic-title">Client Research Data Rules</span>
+              </button>
+
+              <button class="help-topic-btn btn-prompt-quick" data-prompt="Where can I read the Global Code of Business Conduct &amp; Ethics?">
+                <span class="topic-icon">&#128214;</span>
+                <span class="topic-title">Workplace Ethics &amp; Conduct</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Helpful Workflow Starters -->
+          <div class="sidebar-card">
+            <h4>Guided Workflows</h4>
+            <p class="text-muted text-xs">Let the assistant prepare requests for human review:</p>
+            
+            <div class="help-topics-list">
+              <button class="help-topic-btn workflow-topic-btn btn-prompt-quick" data-prompt="Submit formal request for 3-week leave and update my employment records">
+                <span class="topic-icon">&#9997;&#65039;</span>
+                <span class="topic-title">Draft Leave Request for Manager</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Reassuring Confidential Help Card -->
+          <div class="sidebar-card support-shortcut-card">
+            <div class="support-shortcut-header">
+              <span class="support-heart">&#9829;</span>
+              <strong>Need Confidential Support?</strong>
+            </div>
+            <p class="text-xs text-muted" style="margin: 6px 0 12px 0;">
+              For sensitive health disclosures, personal crises, or whistleblowing, please reach out to our dedicated human channels:
+            </p>
+            <div class="support-links">
+              <a href="#tab-support-channels" class="support-pill-link" onclick="document.querySelector('[data-tab=\'tab-support-channels\']').click(); return false;">
+                &#128222; EthicsPoint Hotline (1-800-ETHIC-ES)
+              </a>
+              <a href="#tab-support-channels" class="support-pill-link" onclick="document.querySelector('[data-tab=\'tab-support-channels\']').click(); return false;">
+                &#127973; The Hartford Leave Portal
+              </a>
+              <a href="#tab-support-channels" class="support-pill-link" onclick="document.querySelector('[data-tab=\'tab-support-channels\']').click(); return false;">
+                &#129309; Free Employee Assistance (EAP)
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: Approved Policy Knowledge Base (ABAC)                        -->
+    <!-- =================================================================== -->
+    <section id="tab-policies" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>My Approved Policy Documents</h2>
+          <p class="text-muted">Official company policies authorized for your location, business unit, and employee clearance tier.</p>
+        </div>
+        <div class="filter-controls">
+          <input type="text" id="policy-search" class="form-input" placeholder="Search my policies...">
+          <select id="policy-filter-jur" class="form-select">
+            <option value="ALL">All Jurisdictions</option>
+            <option value="GLOBAL">Global</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="IN">India</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="policy-grid" id="policy-grid-container">
+        <!-- Populated dynamically via /api/policies -->
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: Action Approval Workflows (Guardrail E HITL)                 -->
+    <!-- =================================================================== -->
+    <section id="tab-actions" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>My Workplace Action Requests</h2>
+          <p class="text-muted">Review, confirm, or cancel drafted requests before they are routed to your manager or People Operations.</p>
+        </div>
+      </div>
+
+      <div class="actions-container">
+        <div class="guardrail-e-rules-banner employee-rules-banner">
+          <div class="rule-box allowed">
+            <h5>How AI Workflows Work:</h5>
+            <p class="text-sm text-muted">The assistant helps you draft requests, prepare checklists, and calculate benefits.</p>
+          </div>
+          <div class="rule-box requires-auth">
+            <h5>You Are in Control:</h5>
+            <p class="text-sm text-muted">No request is ever submitted without your explicit confirmation.</p>
+          </div>
+          <div class="rule-box forbidden">
+            <h5>Human Decision Authority:</h5>
+            <p class="text-sm text-muted">Your manager and People Operations always make the final approvals.</p>
+          </div>
+        </div>
+
+        <div class="action-cards-list" id="pending-actions-list">
+          <div class="empty-state">
+            <span class="empty-icon">&#10003;</span>
+            <h4>No Pending Requests</h4>
+            <p class="text-muted">When you ask the assistant to prepare a leave or schedule request, you can review and confirm it here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: Confidential Support Channels                                -->
+    <!-- =================================================================== -->
+    <section id="tab-support-channels" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>Confidential Employee Support Channels</h2>
+          <p class="text-muted">Dedicated, confidential resources for personal health, counseling, workplace grievances, and ethics inquiries.</p>
+        </div>
+      </div>
+
+      <div class="readiness-grid">
+        <div class="readiness-card">
+          <div class="readiness-badge stage-done">ANONYMOUS &bull; 24/7</div>
+          <h3>EthicsPoint Whistleblower Hotline</h3>
+          <p class="text-muted text-sm" style="margin-top:6px;">For confidential, anonymous reporting of fraud, discrimination, harassment, or serious ethical concerns.</p>
+          <ul class="checklist" style="margin-top:14px;">
+            <li><strong>Telephone:</strong> 1-800-ETHIC-ES (Toll-Free, 24/7/365)</li>
+            <li><strong>Email:</strong> ethics@company.internal</li>
+            <li><strong>Anti-Retaliation:</strong> Strict zero-tolerance non-retaliation protections</li>
+          </ul>
+        </div>
+
+        <div class="readiness-card">
+          <div class="readiness-badge stage-done">CONFIDENTIAL LEAVE DESK</div>
+          <h3>The Hartford Medical Leave Portal</h3>
+          <p class="text-muted text-sm" style="margin-top:6px;">For submitting private medical certifications, FMLA leave, and short-term disability claims.</p>
+          <ul class="checklist" style="margin-top:14px;">
+            <li><strong>Medical Privacy:</strong> Managers receive approved leave dates, never medical details</li>
+            <li><strong>Support Email:</strong> leaves-us@enterprise.internal</li>
+            <li><strong>Telephone:</strong> 1-888-555-LEAVE</li>
+          </ul>
+        </div>
+
+        <div class="readiness-card">
+          <div class="readiness-badge stage-done">STATUTORY COMMITTEE</div>
+          <h3>India POSH Internal Complaints Committee (ICC)</h3>
+          <p class="text-muted text-sm" style="margin-top:6px;">Chaired by a Presiding Woman Officer for confidential inquiry into workplace sexual harassment allegations under the POSH Act.</p>
+          <ul class="checklist" style="margin-top:14px;">
+            <li><strong>Confidential Desk:</strong> posh-india@enterprise.internal</li>
+            <li><strong>Legal Protection:</strong> Strict statutory confidentiality safeguards</li>
+          </ul>
+        </div>
+
+        <div class="readiness-card">
+          <div class="readiness-badge stage-done">WELLNESS &amp; COUNSELING</div>
+          <h3>Employee Assistance Program (EAP)</h3>
+          <p class="text-muted text-sm" style="margin-top:6px;">Free, 100% confidential mental wellness counseling, financial advice, and family support for all employees.</p>
+          <ul class="checklist" style="margin-top:14px;">
+            <li><strong>24/7 Helpline:</strong> 1-800-555-EAP-HELP</li>
+            <li><strong>Sessions:</strong> Up to 6 free counseling sessions per event per year</li>
+            <li><strong>Confidential:</strong> Completely independent from company management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

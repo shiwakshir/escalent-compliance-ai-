@@ -1,0 +1,184 @@
+{
+  "policies": [
+    {
+      "id": "POL-GLO-001",
+      "title": "Global Code of Business Conduct & Ethics",
+      "version": "v3.2 - Effective Oct 2026",
+      "jurisdiction": "GLOBAL",
+      "business_units": ["*"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Standard",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 1.2",
+          "title": "Equal Opportunity & Dignity in the Workplace",
+          "content": "The company strictly prohibits discrimination, harassment, retaliation, or bullying in all workplace settings, whether physical or virtual. Every colleague is entitled to respect and psychological safety.",
+          "guidance": "All allegations of harassment or bias are treated with strict confidentiality.",
+          "escalation": "Contact the Global Compliance & Ethics Team at ethics@enterprise.internal or file a report through the confidential EthicsPoint Hotline at 1-800-ETHIC-ES."
+        },
+        {
+          "number": "Section 3.1",
+          "title": "Protection of Client Confidentiality and Work Products",
+          "content": "All research data, consumer panels, client survey results, and proprietary methodologies are confidential company or client property. Employees must never disclose client identity or unreleased research findings to unauthorized parties or third-party AI endpoints.",
+          "guidance": "Client research materials must remain inside approved secure internal repositories.",
+          "escalation": "For client NDA inquiries, contact the Legal & Compliance desk at legal-review@enterprise.internal."
+        },
+        {
+          "number": "Section 5.4",
+          "title": "Employee Compensation & Personal Record Privacy",
+          "content": "Employee compensation, salary structures, performance rating distributions, medical disclosures, and disciplinary history are confidential tier-1 private records. Non-authorized personnel are strictly prohibited from soliciting, viewing, or distributing another employee's compensation or health details.",
+          "guidance": "Employees can only view their own personal profile or aggregate compensation bands through verified People Operations.",
+          "escalation": "Contact People Operations at people-ops@enterprise.internal."
+        }
+      ]
+    },
+    {
+      "id": "POL-USA-002",
+      "title": "US Remote & Hybrid Work Policy",
+      "version": "v2.1 - Effective Jan 2026",
+      "jurisdiction": "US",
+      "business_units": ["*"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Standard",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 2.1",
+          "title": "Hybrid Work Schedule & Core Collaboration Hours",
+          "content": "Full-time US employees eligible for hybrid status are expected to maintain core availability between 10:00 AM and 4:00 PM in their local time zone. Departmental managers establish in-office collaboration cadence (typically 2 days per week for hybrid designated roles).",
+          "guidance": "Schedule adjustments require written manager concurrence.",
+          "escalation": "US People Partner desk at hr-us@enterprise.internal."
+        },
+        {
+          "number": "Section 3.4",
+          "title": "Home Ergonomic & Internet Stipend",
+          "content": "Eligible US remote and hybrid staff receive a one-time home office equipment allowance of $500 upon hire, plus a monthly $60 remote connectivity stipend processed automatically via payroll.",
+          "guidance": "Expense reimbursement claims must be submitted in Concur with itemized receipts within 60 days of purchase.",
+          "escalation": "Expense Support at finance-reimburse@enterprise.internal."
+        }
+      ]
+    },
+    {
+      "id": "POL-GBR-003",
+      "title": "UK Statutory Shared Parental Leave & Maternity Framework",
+      "version": "v4.0 - Effective Nov 2026",
+      "jurisdiction": "UK",
+      "business_units": ["*"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Standard",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 2.0",
+          "title": "Enhanced Maternity & Shared Parental Pay (ShPP)",
+          "content": "UK employees with 26 weeks continuous service prior to the qualifying week are entitled to up to 52 weeks maternity leave, with Enhanced Maternity Pay offering 18 weeks at 100% full pay, followed by 21 weeks of Statutory Maternity Pay (SMP).",
+          "guidance": "Employees must give at least 8 weeks notice before taking shared parental leave periods.",
+          "escalation": "UK People Experience Team at hr-uk@enterprise.internal."
+        },
+        {
+          "number": "Section 4.1",
+          "title": "Statutory Annual Leave Accrual During Leave",
+          "content": "UK statutory leave and public holiday allowances continue to accrue at the standard rate throughout all periods of maternity, adoption, and shared parental leave.",
+          "guidance": "Accrued leave can be scheduled immediately prior to or following parental leave upon manager approval.",
+          "escalation": "UK People Partner at hr-uk@enterprise.internal."
+        }
+      ]
+    },
+    {
+      "id": "POL-IND-004",
+      "title": "India Prevention of Sexual Harassment (POSH) & Disciplinary Redressal",
+      "version": "v1.5 - Effective Aug 2026",
+      "jurisdiction": "IN",
+      "business_units": ["*"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Standard",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 1.0",
+          "title": "Internal Complaints Committee (ICC) Mandate",
+          "content": "Under the POSH Act 2013 and Company India compliance charter, an Internal Complaints Committee (ICC) headed by a Presiding Woman Officer handles all inquiries into workplace sexual harassment with strict statutory confidentiality.",
+          "guidance": "Complaints must be submitted within 3 months of the incident directly to the ICC.",
+          "escalation": "Formal confidential submissions: posh-india@enterprise.internal or Presiding Officer direct line."
+        }
+      ]
+    },
+    {
+      "id": "POL-AUT-005",
+      "title": "Automotive Research BU: Client Telematics & Proprietary Data Protocol",
+      "version": "v2.0 - Effective Sep 2026",
+      "jurisdiction": "GLOBAL",
+      "business_units": ["Automotive Research"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Confidential",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 2.3",
+          "title": "OEM Connected Vehicle Telematics & Geolocation Data Sanitization",
+          "content": "All OEM vehicle telemetry, CAN bus captures, driver habit surveys, and fleet diagnostic datasets must undergo differential privacy scrubbing and MAC-address hashing before ingestion into enterprise analytical workbenches. Raw telemetry must never be exported to unencrypted storage.",
+          "guidance": "Access is restricted strictly to assigned Automotive Research project personnel with signed OEM annexes.",
+          "escalation": "Automotive Data Protection Lead at autodata-sec@enterprise.internal."
+        }
+      ]
+    },
+    {
+      "id": "POL-HR-006",
+      "title": "Confidential HR Investigations & Formal Disciplinary Action Standard",
+      "version": "v3.0 - Effective Jul 2026",
+      "jurisdiction": "GLOBAL",
+      "business_units": ["*"],
+      "allowed_roles": ["HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Restricted",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 4.2",
+          "title": "Formal Disciplinary Decision Protocol",
+          "content": "Disciplinary measures (formal warnings, performance remediation plans, or employment termination) require independent review by the People Partner, documented evidence, legal sign-off, and an in-person or recorded hearing. No automated system or single party may execute termination or disciplinary sanctions.",
+          "guidance": "Strictly confidential documentation accessible solely to designated HR Investigation teams.",
+          "escalation": "Senior Director of People & Legal at hr-investigations@enterprise.internal."
+        }
+      ]
+    },
+    {
+      "id": "POL-USA-007",
+      "title": "US Family & Medical Leave Act (FMLA) and Short-Term Disability",
+      "version": "v2.4 - Effective May 2026",
+      "jurisdiction": "US",
+      "business_units": ["*"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Standard",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 1.1",
+          "title": "FMLA Eligibility & Medical Privacy Safeguards",
+          "content": "Eligible US employees (12 months service and 1,250 hours worked in previous 12 months) are entitled to up to 12 weeks of unpaid, job-protected leave for qualifying family or medical events. Medical certifications are reviewed confidentially by the Company's third-party leave administrator (The Hartford); managers receive only leave status dates and never medical diagnosis details.",
+          "guidance": "Detailed medical records must never be uploaded or described in chat systems.",
+          "escalation": "Confidential Leave Desk at leaves-us@enterprise.internal or Hartford Claims Portal."
+        }
+      ]
+    },
+    {
+      "id": "POL-SEC-008",
+      "title": "Enterprise Information Security & API Credential Governance",
+      "version": "v5.1 - Effective Oct 2026",
+      "jurisdiction": "GLOBAL",
+      "business_units": ["*"],
+      "allowed_roles": ["EMPLOYEE", "HR_SPECIALIST", "COMPLIANCE_OFFICER", "IT_ADMIN"],
+      "minimum_clearance": "Standard",
+      "status": "APPROVED",
+      "sections": [
+        {
+          "number": "Section 2.2",
+          "title": "Prohibition of External Exfiltration and Unauthorized Integrations",
+          "content": "Employees and automated systems are strictly forbidden from directing Company internal data, API tokens, employee records, or policy documents to unauthorized external endpoints, webhooks, or unapproved AI platforms. All API integrations require IT Security review and explicit signed tokens.",
+          "guidance": "Any observed credential leakage or unauthorized exfiltration attempt triggers immediate account suspension and incident triage.",
+          "escalation": "IT Security Operations Center at soc@enterprise.internal."
+        }
+      ]
+    }
+  ]
+}

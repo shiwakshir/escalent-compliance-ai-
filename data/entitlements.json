@@ -1,0 +1,46 @@
+{
+  "entitlements": {
+    "usr-001": {
+      "employee_id": "usr-001",
+      "name": "John Doe",
+      "tenure_months": 28,
+      "jurisdiction": "US",
+      "business_unit": "Automotive Research",
+      "home_office_stipend_claimed": false,
+      "home_office_stipend_amount": 500.0,
+      "monthly_internet_active": true,
+      "fmla_eligible": true,
+      "pto_balance_days": 18.5,
+      "paid_parental_bonding_weeks_allowed": 4,
+      "active_client_projects": ["OEM-Ford-Telematics-2026", "GM-Fleet-Diagnostics-Q4"],
+      "dpa_on_file": true
+    },
+    "usr-002": {
+      "employee_id": "usr-002",
+      "name": "Sophie Clarke",
+      "tenure_months": 34,
+      "jurisdiction": "UK",
+      "business_unit": "Consumer Insights",
+      "home_office_stipend_claimed": true,
+      "home_office_stipend_amount": 0.0,
+      "monthly_internet_active": true,
+      "shpp_eligible": true,
+      "enhanced_maternity_weeks_allowed": 18,
+      "pto_balance_days": 24.0,
+      "active_client_projects": ["Retail-Consumer-Pulse-UK"],
+      "dpa_on_file": false
+    },
+    "usr-003": {
+      "employee_id": "usr-003",
+      "name": "Rajesh Kumar",
+      "tenure_months": 42,
+      "jurisdiction": "IN",
+      "business_unit": "Technology & Analytics",
+      "home_office_stipend_claimed": true,
+      "monthly_internet_active": true,
+      "pto_balance_days": 21.0,
+      "active_client_projects": ["Global-Analytics-Engine"],
+      "dpa_on_file": true
+    }
+  }
+}

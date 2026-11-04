@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "usr-001",
+      "email": "john.doe@enterprise.internal",
+      "name": "John Doe",
+      "role": "EMPLOYEE",
+      "title": "Senior Market Research Analyst",
+      "department": "Automotive Research",
+      "business_unit": "Automotive Research",
+      "jurisdiction": "US",
+      "clearance_level": "Standard",
+      "status": "Active",
+      "manager": "sarah.jenkins@enterprise.internal",
+      "sso_provider": "Corporate Okta Enterprise",
+      "mfa_verified": true
+    },
+    {
+      "id": "usr-002",
+      "email": "sophie.clarke@enterprise.internal",
+      "name": "Sophie Clarke",
+      "role": "EMPLOYEE",
+      "title": "Consumer Insights Lead",
+      "department": "Consumer Insights",
+      "business_unit": "Consumer Insights",
+      "jurisdiction": "UK",
+      "clearance_level": "Standard",
+      "status": "Active",
+      "manager": "david.wright@enterprise.internal",
+      "sso_provider": "Corporate Okta Enterprise",
+      "mfa_verified": true
+    },
+    {
+      "id": "usr-003",
+      "email": "rajesh.kumar@enterprise.internal",
+      "name": "Rajesh Kumar",
+      "role": "HR_SPECIALIST",
+      "title": "Senior People & Talent Partner",
+      "department": "Human Resources",
+      "business_unit": "Technology & Analytics",
+      "jurisdiction": "IN",
+      "clearance_level": "Confidential",
+      "status": "Active",
+      "manager": "ananya.sharma@enterprise.internal",
+      "sso_provider": "Corporate Okta Enterprise",
+      "mfa_verified": true
+    },
+    {
+      "id": "usr-004",
+      "email": "elena.vance@enterprise.internal",
+      "name": "Elena Vance",
+      "role": "COMPLIANCE_OFFICER",
+      "title": "Global Ethics & Compliance Director",
+      "department": "Legal & Compliance",
+      "business_unit": "Corporate Services",
+      "jurisdiction": "US",
+      "clearance_level": "Restricted",
+      "status": "Active",
+      "manager": "executive-board@enterprise.internal",
+      "sso_provider": "Corporate Okta Enterprise",
+      "mfa_verified": true
+    },
+    {
+      "id": "usr-005",
+      "email": "marcus.reed@enterprise.internal",
+      "name": "Marcus Reed",
+      "role": "IT_ADMIN",
+      "title": "Principal Security Systems Architect",
+      "department": "IT Operations",
+      "business_unit": "Corporate Services",
+      "jurisdiction": "US",
+      "clearance_level": "System",
+      "status": "Active",
+      "manager": "cio@enterprise.internal",
+      "sso_provider": "Corporate Okta Enterprise",
+      "mfa_verified": true
+    }
+  ]
+}
